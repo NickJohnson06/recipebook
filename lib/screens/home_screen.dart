@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../models/recipe.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
