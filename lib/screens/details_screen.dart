@@ -13,15 +13,9 @@ class DetailsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: crossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // image
-            if (recipe.imageUrl != null)
-              Image.network(recipe.imageUrl!),
-            
-            const SizedBox(height: 16),
-
-            // Recipe name
+            // Recipe Name
             Text(
               recipe.name,
               style: const TextStyle(
@@ -29,7 +23,6 @@ class DetailsScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-
             const SizedBox(height: 16),
 
             // Ingredients
@@ -41,9 +34,7 @@ class DetailsScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-            ...recipe.ingredients.map(
-              (ingredient) => Text('• $ingredient'),
-            ),
+            ...recipe.ingredients.map((ingredient) => Text('• $ingredient')),
 
             const SizedBox(height: 16),
 
