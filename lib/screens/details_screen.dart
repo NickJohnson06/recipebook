@@ -15,6 +15,22 @@ class DetailsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            
+          if (recipe.imageUrl != null)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0),
+              child: SizedBox(
+                height: 300,
+                width: double.infinity,
+                child: Image.asset(
+                  recipe.imageUrl!,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+
+
+            
             // Recipe Name
             Text(
               recipe.name,

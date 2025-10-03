@@ -20,5 +20,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    # Example: add images here if you want
-    # - assets/images/
+    - assets/images/chicken_quesadilla.jpg
+    - assets/images/avocado_toast.jpg
+    - assets/images/garlic_butter_shrimp.jpg
