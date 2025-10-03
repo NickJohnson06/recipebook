@@ -25,13 +25,27 @@ final List<Recipe> favRecipes = [
 ];
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final bool isDarkMode;
+  final VoidCallback onToggleDarkMode;
+
+  const HomeScreen({
+    super.key,
+    required this.isDarkMode,
+    required this.onToggleDarkMode,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('My Favorite Recipes'),
-      centerTitle: true,
+      appBar: AppBar(
+        title: const Text('My Favorite Recipes'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(isDarkMode ? Icons.dark_mode : Icons.light_mode),
+            onPressed: onToggleDarkMode,
+          ),
+        ],
       ),
       body: ListView.builder(
         itemCount: favRecipes.length,
