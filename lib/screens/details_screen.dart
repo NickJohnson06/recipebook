@@ -28,8 +28,6 @@ class DetailsScreen extends StatelessWidget {
                 ),
               ),
             ),
-
-
             
             // Recipe Name
             Text(
